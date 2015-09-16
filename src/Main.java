@@ -1,34 +1,28 @@
+
 public class Main {
 
 
-
-
     public static void main(String[] args) {
-        System.out.println("Hello World!");
+       //Ein einfacher Systemout Test
+       System.out.println("Hello World!");
+
+        //Eine ArrayListe und ein paar Methoden
+        Item NeuesItem = new Item();
+        NeuesItem.setElement("Hallo ");
+        NeuesItem.setElement("Du ");
+        NeuesItem.setElement("Bastard");
+
+        System.out.println("Element: "+NeuesItem.getElement(1));
+        NeuesItem.PrintAllItems();
+        NeuesItem.setElementto(1,"Ich");
+        NeuesItem.PrintAllItems();
+
+        //Hier wird nun ein Objekte aus abgeleiteten Klassen
+
+        Kaffee kleinerkaffee = new Espresso();
 
 
-        Item NeuesIem = new Item();
 
-        NeuesIem.PrintItem();
-        NeuesIem.setCount(12);
-        NeuesIem.setItem("Muhaha");
-
-        if(NeuesIem.getCount() == 12)
-                System.out.println("Es ist eine " + NeuesIem.getCount());
-
-        NeuesIem.PrintItem();
-
-        int i = 1;
-
-        while(i<100){
-            i++;
-            int p = i;
-            Item helper = new Item(p);
-            helper.PrintItem();
-            Item dance = new Item(p,helper.ToString(p));
-            dance.PrintItem();
-        }
-
-     }
+    }
 
 }

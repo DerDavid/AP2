@@ -1,49 +1,45 @@
 /**
  * Created by DerDaviD on 16.09.2015.
  */
+import java.util.ArrayList;
+import java.util.List;
+
+
 public class Item {
 
-    private Integer count;
-    private String item;
 
-    public Item() {
+    List Items = new ArrayList<String>();
 
-    }
-    public Item(Integer count, String item){
-    this.count = count;
-        this.item = item;
-    }
-    public Item(Integer count){
 
+    public Object getElement(int elementnumber) {
+        return Items.get(elementnumber);
     }
 
-
-    public Integer getCount() {
-        return count;
+    public void addElement (String Element) {
+        Items.add(Element);
     }
 
-    public void setCount(Integer count) {
-        this.count = count;
-    }
-
-    public String getItem() {
-        return item;
-    }
-
-    public void setItem(String item) {
-        this.item = item;
-    }
-
-    public String ToString(int i){
-       String P = Integer.toString(i);
+    public String ToString(int i) {
+        String P = Integer.toString(i);
         return P;
     }
-    
-    public void PrintItem(){
-        
-        System.out.println("Die Nummer des Items ist: " + count + " und heisst: " + item);
 
+    public void PrintAllItems() {
+        int i = 0;
+        while (i < Items.size()) {
+
+            System.out.println("Die Nummer des Items ist: " + i + " und heisst: " + Items.get(i));
+            i++;
+        }
     }
 
+    public void setElementto(int i,String wert ){
+
+        Items.set(i,wert);
+    }
+
+    public void setElement(String element) {
+        Items.add(element);
+    }
 }
 
