@@ -17,6 +17,18 @@ public class Main {
                 System.out.println("Es ist eine " + NeuesIem.getCount());
 
         NeuesIem.PrintItem();
-    }
+
+        int i = 1;
+
+        while(i<100){
+            i++;
+            int p = i;
+            Item helper = new Item(p);
+            helper.PrintItem();
+            Item dance = new Item(p,helper.ToString(p));
+            dance.PrintItem();
+        }
+
+     }
 
 }
